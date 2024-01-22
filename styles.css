@@ -1,0 +1,77 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f2f2f2;
+}
+
+.table-container {
+  width: 80%; /* Adjust the width as needed */
+  /* margin: 0 auto; Center the table horizontally */
+  margin: 20px auto 0; /* Add margin-top to create space */
+  overflow-x: auto;
+  text-align: center;
+}
+
+#csv-table {
+  width: 100%;
+  border-collapse: collapse;  /* sets whether tbale borders should collapse into a single border or be separated */
+  margin-top: 20px;
+  border: 2px solid #4CAF50; /* Add a border to the entire table */
+}
+
+#csv-table th, #csv-table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+/* header styling */
+#csv-table th {
+  position: sticky;  /* fix the first column */
+  top: 0;
+  z-index: 1;
+}
+
+#csv-table tr:nth-child(even) { /* row by row coloring, even rows in color and odd rows in a lighter color   */
+  background-color: #f2f2f2;
+}
+
+
+/* hover effect to highlight rows when i hover over them */
+#csv-table tr:hover {
+  background-color: #ddd;
+}
+
+/* Center the content of the th elements */
+#csv-table th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+
+/* Center the text inside the th elements */
+#csv-table th, #csv-table td {
+  white-space: nowrap;
+}
+
+/* Ensure visibility of the first th element */
+#csv-table th:first-child::before {
+  content: '\00a0';
+  display: inline-block;
+  width: 20px;
+}
+
+
+/* Ensure visibility of the first row */
+#csv-table th:first-child, #csv-table td:first-child {  /* first child represents the first element among a group of sibling elemnts */
+  position: sticky;
+  left: 0;
+  background-color: #4CAF50;
+  color: white;
+  z-index: 2;
+}
