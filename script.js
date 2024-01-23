@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
   // csv path .. same directory plz
-  const csvFilePath = 'contigs.csv';
+  const csvFilePath = 'contigs_non_contam.csv';
 
   // les deux finctions: fetch et parse
   async function fetchAndParseCSV(filePath) {
